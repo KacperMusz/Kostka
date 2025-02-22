@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kostka.MainPage">
+
+    <StackLayout Padding="10">
+        <!-- Nagłówek -->
+        <Label Text="Gra w kości. Autor 000000000"
+               FontSize="24"
+               TextColor="White"
+               BackgroundColor="#A52A2A"
+               HorizontalOptions="Fill"
+               
+               Padding="10"/>
+
+        <!-- Przycisk rzutu kośćmi -->
+        <Button Text="RZUĆ KOŚĆMI"
+                BackgroundColor="#D2691E"
+                TextColor="White"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                Clicked="RollDice"
+                Margin="10"/>
+
+        <!-- Obrazy kości -->
+        <StackLayout Orientation="Horizontal"
+                     BackgroundColor="White"
+                     HorizontalOptions="Fill"
+                     Spacing="9"
+                     Padding="9">
+            <Image x:Name="Dice1" Source="question.jpg" HeightRequest="60"/>
+            <Image x:Name="Dice2" Source="question.jpg" HeightRequest="60"/>
+            <Image x:Name="Dice3" Source="question.jpg" HeightRequest="60"/>
+            <Image x:Name="Dice4" Source="question.jpg" HeightRequest="60"/>
+            <Image x:Name="Dice5" Source="question.jpg" HeightRequest="60"/>
+        </StackLayout>
+
+        <!-- Wynik rzutu -->
+        <Label x:Name="RollResultLabel" 
+               Text="Wynik tego losowania: 0"
+               FontSize="18"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+        <!-- Wynik gry -->
+        <Label x:Name="GameResultLabel" 
+               Text="Wynik gry: 0"
+               FontSize="18"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+        <!-- Przycisk resetowania -->
+        <Button Text="RESETUJ WYNIK"
+                BackgroundColor="#D2691E"
+                TextColor="White"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                Clicked="Reset"
+                Margin="10"/>
+    </StackLayout>
+</ContentPage>
